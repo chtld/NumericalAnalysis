@@ -1,35 +1,41 @@
 format long;
-%f = @(x) cos(x)-x;
-%f = @(x) cos(x);
-%f = @(x) x^2;
-%f = @(x) 4/3*exp(2-x/2)*(1+1/x*log10(x));
-%f = @(x) (20*x-1)/(19*x);
-%f = @(x) 2-exp(x);
-%f = @(x) x^2;
-%f = @(x) atan(x);
-f = @(x) x^3+x^2-3*x-3;
-f1 = @(x) x-(x^3+x^2-3)/3;
-f2 = @(x) x-(-1+(3*x+3)/x^2);
-f3 = @(x) x-(3+3*x-x^2)^(1/3);
-f4 = @(x) x-((3+3*x-x^3)/x)^(1/2);
-f5 = @(x) x-(x-(x^3+x^2-3*x-3)/(3*x^2+2*x-3));
-x0 = 1.;
-epsilon = 1e-6;
+% %f = @(x) cos(x)-x;
+% %f = @(x) cos(x);
+% %f = @(x) x^2;
+% %f = @(x) 4/3*exp(2-x/2)*(1+1/x*log10(x));
+% %f = @(x) (20*x-1)/(19*x);
+% %f = @(x) 2-exp(x);
+% %f = @(x) x^2;
+% %f = @(x) atan(x);
+% f = @(x) x^3+x^2-3*x-3;
+% f1 = @(x) x-(x^3+x^2-3)/3;
+% f2 = @(x) x-(-1+(3*x+3)/x^2);
+% f3 = @(x) x-(3+3*x-x^2)^(1/3);
+% f4 = @(x) x-((3+3*x-x^3)/x)^(1/2);
+% f5 = @(x) x-(x-(x^3+x^2-3*x-3)/(3*x^2+2*x-3));
+% x0 = 1.;
+% epsilon = 1e-6;
+% max_iterations = 1000;
+% root = Newton_Method(f, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% root = Newton_Method(f1, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% root = Newton_Method(f2, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% root = Newton_Method(f3, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% root = Newton_Method(f4, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% root = Newton_Method(f5, x0, epsilon, max_iterations);
+% fprintf('The solution of this equation is : %f\n',root);
+% 
+a = 0.5;
+f = @(x) 1/x-a;
+x0 = -0.001;
+epsilon = 1e-16;
 max_iterations = 1000;
 root = Newton_Method(f, x0, epsilon, max_iterations);
 fprintf('The solution of this equation is : %f\n',root);
-root = Newton_Method(f1, x0, epsilon, max_iterations);
-fprintf('The solution of this equation is : %f\n',root);
-root = Newton_Method(f2, x0, epsilon, max_iterations);
-fprintf('The solution of this equation is : %f\n',root);
-root = Newton_Method(f3, x0, epsilon, max_iterations);
-fprintf('The solution of this equation is : %f\n',root);
-root = Newton_Method(f4, x0, epsilon, max_iterations);
-fprintf('The solution of this equation is : %f\n',root);
-root = Newton_Method(f5, x0, epsilon, max_iterations);
-fprintf('The solution of this equation is : %f\n',root);
-
-
 function [result, iterations] = Newton_Method(function_f, x0, epsilon, max_iterations)
 % This function has four input parameter, and return the root of f(x)=0
 % input:
