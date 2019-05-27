@@ -8,4 +8,3 @@ for i=0:1:n
     C(i+1) = (-1)^(n-i)/(n*factorial(i)*factorial(n-i))*b;
 end
 end
-
