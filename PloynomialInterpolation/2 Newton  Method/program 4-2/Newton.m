@@ -6,7 +6,9 @@ b=2;
 w=20;
 h=(b-a)/w;
 X=a:h:b;
-Y=sin(X);
+% Y=sin(X);
+f = @(x) 1./(1 + 5 .* x.^2);
+Y = f(X);
 x0=X';
 y0=Y';
 %计算差商
@@ -35,7 +37,7 @@ for i=n:-1:1
 end
 y=x1'*D;
 %计算牛顿插值多项式
-xh=a:0.1:b;
+xh=a:0.01:b;
 yh=zeros(1,(b-a)/0.1+1);
 for i=1:length(xh)
     yh(i)=subs(y,'x',xh(i));

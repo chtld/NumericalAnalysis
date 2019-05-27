@@ -1,6 +1,6 @@
 function Newton(fun, left, right, order1, order2)
 for n = order1: order2
-    h = (right - left) / (n + 1);
+    h = (right - left) / n;
     x = left: h: right;
     y = fun(x);
     coef = DiffQuotient(x', y');
@@ -13,7 +13,7 @@ for n = order1: order2
     end
     simplify(poly);
     z = left: 0.01: right;
-    if mod(n, 2) == 0
+    if mod(n, 20) == 0
         hold on;
         plot(z, subs(poly, 't', z), 'b', z, fun(z), 'g');
     end
