@@ -1,4 +1,4 @@
-![scientific](./images/scientific.png)
+![scientific](./docs/images/scientific.png)
 
 ![author](https://img.shields.io/badge/author-chtld-success.svg)  ![license](https://img.shields.io/badge/license-MIT-green.svg) ![language](https://img.shields.io/badge/language-matlab-blue.svg) ![version](https://img.shields.io/badge/numerical-v0.10-red.svg)
 
